@@ -35,15 +35,15 @@ function App() {
 
   if(location == false) {
     return (
-      <>
+      <h4>
         Você precisa habilitar a localização no browser.
-      </>
+      </h4>
     )
   } else if(weather == false) {
     return (
-      <>
+      <h4>
         Carregando o clima...
-      </>
+      </h4>
     )
   } else {
     return (
