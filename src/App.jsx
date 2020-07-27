@@ -21,11 +21,15 @@ function App() {
     console.log(res.data)
   }
 
+  let onlyweather = axios.get("https://api.openweathermap.org/data/2.5/weather");
+
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
       getWeather(position.coords.latitude, position.coords.longitude);
       setLocation(true);
-    })
+    });
+
+    console.log(onlyweather);
   }, []) 
 
   function roundUnit(input) {
