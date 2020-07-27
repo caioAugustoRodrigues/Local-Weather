@@ -1,4 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Using Weather API from https://home.openweathermap.org/
+Hosted on https://caioaugustorodrigues.github.io/Local-Weather/
 
 ## Available Scripts
 
