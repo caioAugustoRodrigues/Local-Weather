@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './index.css';
 
 
 function App() {
@@ -48,16 +49,17 @@ function App() {
   } else {
     return (
       <>
-        <h3>Clima em {weather['name']} ({weather['weather'][0]['description']})</h3>
-        <hr/>
-        <ul>
-          <li>Temperatura atual: {roundUnit(weather['main']['temp'])} Cº</li>
-          <li>Sensação de: {roundUnit(weather['main']['feels_like'])} Cº</li>
-          <li>Máxima: {roundUnit(weather['main']['temp_max'])} Cº</li>
-          <li>Mínima: {roundUnit(weather['main']['temp_min'])} Cº</li>
-          <li>Pressão: {roundUnit(weather['main']['pressure'])}hpa</li>
-          <li>Umidade: {weather['main']['humidity']}%</li>
-        </ul>
+        <div className="card">
+          <h3>Clima em {weather['name']} ({weather['weather'][0]['description']})</h3>
+          <ul>
+            <li>Temperatura atual: {roundUnit(weather['main']['temp'])} Cº</li>
+            <li>Sensação de: {roundUnit(weather['main']['feels_like'])} Cº</li>
+            <li>Máxima: {roundUnit(weather['main']['temp_max'])} Cº</li>
+            <li>Mínima: {roundUnit(weather['main']['temp_min'])} Cº</li>
+            <li>Pressão: {roundUnit(weather['main']['pressure'])}hpa</li>
+            <li>Umidade: {weather['main']['humidity']}%</li>
+          </ul>
+        </div>
       </>
     )
   }
